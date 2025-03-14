@@ -5,6 +5,12 @@ window.addEventListener("load", () => {
     animationTimeline();
 });
 
+document.getElementById("playMusic").addEventListener("click", function () {
+    document.querySelector(".song").play();
+    this.style.display = "none"; // Hide button after clicking
+    animationTimeline(); // Start animations
+});
+
 const animationTimeline = () => {
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
